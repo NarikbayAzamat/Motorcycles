@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motorcycles Website</title>
+    <style>
+        img {
+            width: 60%;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .tab {
+            overflow: hidden;
+        }
+        .tab button {
+            background-color: #f0f0f0;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+            border-radius: 10px 10px 0 0;
+        }
+        .tab button:hover {
+            background-color: #ddd;
+        }
+        .tabcontent {
+            display: none;
+            padding: 20px;
+            border-top: 1px solid #ddd;
+        }
+        .model-img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Models')">Models</button>
+        <button class="tablinks" onclick="openTab(event, 'Reviews')">Reviews</button>
+        <button class="tablinks" onclick="openTab(event, 'Resources')">Resources</button>
+    </div>
+
+    <div id="Models" class="tabcontent">
+        <h2>Models</h2>
+        <p>Explore the latest motorcycle models from top manufacturers.</p>
+        <h3>Honda CBR600RR</h3>
+        <img src="imgs/Honda-CBR600RR.jpg" alt="Honda CBR600RR" class="model-img">
+        <p>The Honda CBR600RR is a sportbike that has been praised for its handling, reliability, and performance. It features a powerful 599cc inline-four engine and a lightweight chassis, making it a popular choice among motorcycle enthusiasts.</p>
+        <p>For more information and photographs, visit the <a href="#">official Honda website</a>.</p>
+        <h3>Yamaha YZF-R1</h3>
+        <img src="imgs/Yamaha-YZF-R1.jpg" alt="Yamaha YZF-R1" class="model-img" width="600px">
+        <p>The Yamaha YZF-R1 is a superbike known for its cutting-edge technology and track-focused performance. With features such as Yamaha's YCC-T fly-by-wire throttle and YCC-I variable-length intake system, the YZF-R1 offers exceptional power delivery and handling.</p>
+        <p>For test rides and reviews, check out <a href="#">popular motorcycle magazines</a>.</p>
+    </div>
+
+    <div id="Reviews" class="tabcontent">
+        <h2>Reviews</h2>
+        <p>Read in-depth reviews and tests of various motorcycles.</p>
+        <h3>Suzuki GSX-R1000 Review</h3>
+        <p>The Suzuki GSX-R1000 is a legendary sportbike known for its exceptional performance and agility. In a recent review, critics praised its powerful engine, precise handling, and advanced electronics.</p>
+        <p>For detailed reviews and performance tests, visit <a href="#">online motorcycle forums</a>.</p>
+    </div>
+
+    <div id="Resources" class="tabcontent">
+        <h2>Resources</h2>
+        <p>Find advice on repair, setup, operation, and materials about motorsports.</p>
+        <h3>Motorcycle Repair Guides</h3>
+        <p>Owners can find comprehensive repair guides and tutorials for common motorcycle maintenance tasks such as oil changes, chain adjustments, and brake pad replacements.</p>
+        <p>Forums and online communities provide valuable advice and support for motorcycle enthusiasts.</p>
+        <h3>Biker Clubs and Events</h3>
+        <p>Join local biker clubs and participate in group rides, charity events, and motorcycle rallies. These clubs offer camaraderie and networking opportunities for motorcycle enthusiasts.</p>
+        <p>Stay updated on upcoming events and gatherings through social media and motorcycle forums.</p>
+    </div>
+</div>
+
+<script>
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>
+
+</body>
+</html>
